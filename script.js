@@ -1,13 +1,10 @@
-function openEnvelope() {
-    document.querySelector(".top").style.transform = "rotateX(180deg)";
-    document.querySelector(".letter").style.transform = "translateY(-50px)";
-    document.querySelector(".hearts").style.opacity = "1";
-    document.querySelector(".hearts").style.transform = "translateY(-10px)";
-}
-
-function resetEnvelope() {
-    document.querySelector(".top").style.transform = "rotateX(0deg)";
-    document.querySelector(".letter").style.transform = "translateY(0px)";
-    document.querySelector(".hearts").style.opacity = "0";
-    document.querySelector(".hearts").style.transform = "translateY(20px)";
+function login() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    if (username === "wry01" && password === "ngrok") {
+        document.querySelector('.login-container').style.display = 'none';
+        document.getElementById('info').style.display = 'block';
+    } else {
+        document.getElementById('error-message').style.display = 'block';
+    }
 }
