@@ -1,30 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carta</title>
+    <title>CyberSecurity</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="envelope">
-            <div class="top"></div>
-            <div class="body"></div>
-            <div class="flap"></div>
-            <div class="letter">
-                <div class="hearts">
-                    <span>❤️</span>
-                    <span>❤️</span>
-                    <span>❤️</span>
-                </div>
-            </div>
-        </div>
-        <div class="buttons">
-            <button onclick="openEnvelope()">Abrir</button>
-            <button onclick="resetEnvelope()">Resetar</button>
-        </div>
+    <h1>Bem-vindo ao CyberSecurity Guide</h1>
+    <div class="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Usuário">
+        <input type="password" id="password" placeholder="Senha">
+        <button onclick="login()">Entrar</button>
+        <p id="error-message" style="color: red; display: none;">Usuário ou senha incorretos!</p>
     </div>
+
+    <div class="content" id="info" style="display: none;">
+        <h2>O que é CyberSecurity?</h2>
+        <p>CyberSecurity, ou Segurança Cibernética, é um conjunto de práticas, tecnologias e processos projetados para proteger sistemas, redes e dados contra ataques cibernéticos...</p>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
