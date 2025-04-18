@@ -1,374 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8"/>
-     <meta name="description"  content="Site Oficial do Poder Executivo Municipal de São Jorge/RS" />
-    <meta name="author" content="Slah Informática - slah.com.br" />
-    <meta name="publisher" content="Slah Informática - slah.com.br" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-    <link rel="shortcut icon" href="assets/imagens/favicon.ico">
-
-    <title>Prefeitura Municipal de São Jorge/RS </title>
-
-    <!-- css -->
-    <link href="assets/css/kryztyles.css" rel="stylesheet">
-    <link href="assets/css/tema.css" rel="stylesheet">
-
-        <link rel="stylesheet" href="assets/owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/owlcarousel/owl.theme.default.min.css">
-        <script src="assets/owlcarousel/jquery.min.js"></script>
-    <script src="assets/owlcarousel/owl.carousel.js"></script>
-
-    <!-- /css -->
-
-    <!-- google analytics -->
-
+  <meta charset="UTF-8">
+  <title>Hacked by Wry</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+    }
+    .comentario {
+      background-color: #ddd;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .destaque {
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+      color: red;
+      text-shadow: 2px 2px 5px black;
+      text-decoration: underline;
+    }
+    .equipe {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .nomes {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .greetz {
+      text-align: center;
+      margin-top: 30px;
+      color: gray;
+    }
+    a {
+      color: black;
+    }
+  </style>
 </head>
-<body class="pg-home" onscroll="stickyMenu()"><!-- pg-interna -->
-
-<!-- <div class="barrafixa">
-        <div class="bfcont">
-            <div class="bf1">
-                <a href="#" class="bftxt alinharmedio" target="_blank"><img src="assets/imagens/#.png" alt="" class='img-responsive'/></a>
-
-            </div></div></div>
--->
-
-    <div class="barratopo">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-xs-6">
-                    <a href="#conteudo"><img src="assets/imagens/1.png" height="16" width="16" alt="" />Ir para o conte&uacute;do</a>
-                    <a href="#nav"><img src="assets/imagens/2.png" height="16" width="16" alt="" />Ir para o menu </a>
-                    <a href="#busca"><img src="assets/imagens/3.png" height="16" width="16" alt="" />Ir para a busca</a>
-                    <a href="#rodape"><img src="assets/imagens/4.png" height="16" width="16" alt="" />Ir para o rodap&eacute;</a>
-                </div><!-- /.col-xs-6 -->
-
-                <div class="col-xs-6 text-right">
-
-                    <a href="#" data-toggle="modal" data-target="#modalAcessibilidade">Acessibilidade</a>
-                    |
-                    <a href="javascript: altoContraste();">Alto Contraste</a>
-                    |
-                    <a href="#mapa-do-site">Mapa do Site</a>
-                    |
-                    <a href="#" data-toggle="modal" data-target="#modalLibras">Libras</a>
-                    |
-                   Tamanho da  Fonte:
-                    <a href="javascript: diminuirFont()">A-</a>
-                    |
-                    <a href="javascript: aumentarFont()">A+</a>
-
-                </div><!-- /.col-xs-6 -->
-
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </div><!-- /.barratopo -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="modalAcessibilidade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Acessibilidade</h4>
-          </div>
-          <div class="modal-body">
-
-            <div class="editor">
-
-                <p>ALT + 1: IR para o Conte&uacute;do</p>
-                <p>ALT + 2: IR para o Menu</p>
-                <p>ALT + 3: IR para a Busca</p>
-                <p>ALT + 4: IR para o Rodap&eacute;</p>
-                <p>ALT + 5: Alto Contraste</p>
-                <p>ALT + 6: Aumentar a Fonte</p>
-                <p>ALT + 7: Diminuir a Fonte</p>
-
-
-            </div>
-            <!-- /.editor -->
-            <div class="clearfix"></div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="modalLibras" tabindex="-1" role="dialog" aria-labelledby="myModalLibras" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Acessibilidade</h4>
-          </div>
-          <div class="modal-body">
-
-            <div class="editor">
-
-                 <p>Para acessar o conte&uacute;do do site em libras baixe o <a href="https://www.vlibras.gov.br/" target="_blank">VLIBRAS</a>!</p>
-
-            </div>
-            <!-- /.editor -->
-            <div class="clearfix"></div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <style>.header{ background-image: url('assets/imagens/fundo-cidade.jpg'); }</style>
-    <header class="header" id="header">
-
-        <video muted autoplay loop id="video-home">
-          <source src="assets/videos/video_saojorge.mp4" data-lazy="" type="video/mp4"  class="lazy">
-        </video>
-
-        <div class="header1">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-xs-12 col-sm-4 col-md-6">
-                        <a href="index.php" class="logo">
-                            <img src="assets/imagens/logo-municipio.png"  alt="" />
-                        </a>
-                    </div><!-- /.col-xs-3 -->
-
-                    <div class="col-xs-12 col-sm-8 col-md-6 header-right">
-                        <div class="climatempo">
-
-                            <div id="previsaoJS">
-
-
-
-    <span class="temperatura">
-
-    <div class="minmax">
-      <font size="1"><span id="resumo"></span></font>
-        <div class="max">
-            M&aacute;x. <span id="weather-high"></span> &#176;
-        </div>
-        <div class="min"></div>
-         M&iacute;n. <span id="weather-low"></span> &#176;
-    </div>
-
-</div>
-
-
-                        <script language=javascript>
-var day = new Object();
-var mon = new Object();
-date=new Date();
-var y2000 = date.getFullYear();
-day[0]="Domingo";
-day[1]="Segunda-Feira";
-day[2]="Terça-Feira";
-day[3]="Quarta-Feira";
-day[4]="Quinta-Feira";
-day[5]="Sexta-Feira";
-day[6]="Sábado";
-mon[0]="Janeiro";
-mon[1]="Fevereiro";
-mon[2]="Março";
-mon[3]="Abril";
-mon[4]="Maio";
-mon[5]="Junho";
-mon[6]="Julho";
-mon[7]="Agosto";
-mon[8]="Setembro";
-mon[9]="Outubro";
-mon[10]="Novembro";
-mon[11]="Dezembro";
-jahr=date.getFullYear();
-document.write('' +day[date.getDay()]+", "+date.getDate()+" de "+mon[date.getMonth()]+" de " +jahr + '</font>');</SCRIPT>
-                   </div><!-- /.climatempo --> </div><!-- /.col-xs-6 -->
-
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </div><!-- /.header1 -->
-
-        <div class="container" id="busca">
-            <h2>O QUE VOC&Ecirc; PROCURA?</h2>
-
-            <form enctype="multipart/form-data" method="post" action="busca.php?a=buscar">
-                <div class="inpholder">
-                    <input type="text" class="buscainput" placeholder="Ex.: Licitações, Concurso, etc" name="palavra"/>
-                    <input type="image" src="assets/imagens/icone-lupa.png" class="buscabtn" />
-                </div><!-- /.inpholder -->
-            </form>
-
-        </div><!-- /.container -->
-
-        <nav class="nav" id="nav">
-            <span class="navbtn" id="navbtn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </span>
-                <meta charset="UTF-8"/>
-<div id="menu">
-<ul class="menu">
-                <li>
-                    <a href="index.php"><img src="assets/imagens/icone-home.png" height="22" width="24" alt="" /></a>
-                </li>
-                <li>
-                    <a href="pg.php?area=HISTORIA">CIDADE</a>
-
-                    <ul class="submenu">
-                        <li><a href="pg.php?area=HISTORIA">História</a></li>
-                        <li><a href="pg.php?area=SIMBOLOS">Símbolos</a></li>
-                        <li><a href="pg.php?area=MAPAS">Mapas</a></li>
-                        <li><a href="pg.php?area=FOTOS">Fotos</a></li>
-                        <li><a href="pg.php?area=VIDEOS">Vídeos</a></li>
-                        <li><a href="pg.php?area=PROGRAMAS">Programas</a></li>
-                    </ul>
-
-                </li>
-                <li>
-                    <a href="pg.php?area=GABINETEDOPREFEITO">PREFEITURA</a>
-
-                    <ul class="submenu">
-
-                                                <li><a href='pg.php?area=ALMOXARIFADO'>Almoxarifado</a></li> <li><a href='pg.php?area=CONTROLEINTERNO'>Controle Interno.</a></li> <li><a href='pg.php?area=JUNTAMILITAR'>Junta Militar</a></li> <li><a href='pg.php?area=EDUCACAO'>Sec. Mun. da Educação.</a></li> <li><a href='pg.php?area=ADMINISTRACAO'>Sec. Mun. de Administração. </a></li> <li><a href='pg.php?area=AGRICULTURA'>Sec. Mun. de Agricultura e Meio Ambiente.</a></li> <li><a href='pg.php?area=ASSISTSOCIAL'>Sec. Mun. de Assistência Social, Habitação e Emprego - CRAS</a></li> <li><a href='pg.php?area=CTDL'>Sec. Mun. de Cultura, Turismo, Desporto e Lazer.</a></li> <li><a href='pg.php?area=FAZENDA'>Sec. Mun. de Finanças, Indústria, Comércio e Serviços.</a></li> <li><a href='pg.php?area=OBRAS'>Sec. Mun. de Obras, Serviços Viários e Trânsito.</a></li> <li><a href='pg.php?area=SAUDE'>Sec. Mun. de Saúde.</a></li> <li><a href='pg.php?area=VIGILANCIASANITARIA'>Vigilância Sanitária.</a></li>            
-
-                        <li><a href="pg.php?area=CONSELHOTUTELAR">Conselho Tutelar</a></li>
-
-                        <li><a href="https://www.camarasaojorge.rs.gov.br/" target="_blank">Poder Legislativo</a></li>
-                    </ul>
-
-
-                </li>
-                <li>
-                    <a href="pg.php?area=CIDADAO">CIDAD&Atilde;O</a>
-
-                    <ul class="submenu">
-
-                                                        <li><a href="https://saojorge.cittaweb.com.br/citta/#/transparencia" target="_blank">Portal da Transparência</a></li>
-                                                <li><a href="https://saojorge.cittaweb.com.br/citta/#/nfse" target="_blank">NFS-e Emissão de Nota Fiscal de Serviço Eletrônica</a></li>
-                                                <li><a href="https://saojorge.cittaweb.com.br/citta/#/autoatendimento/novaCnd" target="_blank">CND - Certidão Negativa de Débitos</a></li>
-                                                <li><a href="https://saojorge.cittaweb.com.br/citta/#/autoatendimento" target="_blank">AUTOATENDIMENTO - Serviços Online</a></li>
-                                                        <li><a href="https://saojorge.cittaweb.com.br/citta/#/sic/formularioOuvidoria" target="_blank">Ouvidoria</a></li>
-
-                                                        <li><a href="https://saojorge.cittaweb.com.br/citta/#/sic/formulario" target="_blank">Serviço de Informação ao Cidadão</a></li>
-
-                                                        <li><a href="https://devolveicms.rs.gov.br/" target="_blank">Devolve ICMS</a></li>
-                        <li><a href="https://portalnovo.tce.rs.gov.br/informacoes-dos-fiscalizados/" target="_blank">TCE - Controle Social</a></li>
-                       <li> <a href="https://www.google.com/search?q=previs%C3%A3o+do+tempo+s%C3%A3o+jorge&rlz=1C1CHZN_pt-BRBR1032BR1032&oq=previs%C3%A3o+do+tempo+s%C3%A3o+jorge" target="_blank">Previsão do Tempo para São Jorge/RS</a></li>
-                        <li><a href="https://receita.fazenda.rs.gov.br/lista/3973/lista-de-inscritos-em-divida-ativa-ref" target="_blank">Lista de Inscritos em D&iacute;vida Ativa - Receita Estadual RS</a></li>
-                                                <li><a href="https://receita.fazenda.rs.gov.br/lista/3059/pit-(programa-de-integracao-tributaria)" target="_blank">                    PIT - Programa de Integração Tributária</a></li>
-                                                <li><a href="https://www.facebook.com/saojorgers/" target="_blank"> Facebook Prefeitura São Jorge</a></li>
-
-                    </ul>
-
-
-                </li>
-                <li>
-                    <a href="pg.php?area=LICITACOES">LICITA&Ccedil;&Otilde;ES</a>
-
-                    <ul class="submenu">
-                        <li><a href="https://portal.tce.rs.gov.br/aplicprod/f?p=50500:4:::NO::F50500_CD_ORGAO:71100&cs=18qan6A8w09j7VMwdQgkTdNx9fT0" target="_blank"><b>Licitações e Contratos - LicitaCon</b></a></li>
-                                                 <li><a href="https://saojorge.cittaweb.com.br/citta/#/transparencia/licitacoes/todas" target="_blank"><b>Portal de Licitações - Città</b></a></li>
-               <li><a href='pg.php?area=PUBLICACOES&subarea=60&ano=2025'>Licitação - Adesão à ata de registro de preços de outro órgão</a></li> <li><a href='pg.php?area=PUBLICACOES&subarea=24&ano=2025'>Licitação - Chamada Pública PNAE</a></li> <li><a href='pg.php?area=PUBLICACOES&subarea=46&ano=2025'>Licitação - Chamamento Público</a></li> <li><a href='pg.php?area=PUBLICACOES&subarea=47&ano=2025'>Licitação - Chamamento Público de Credenciamento</a></li> <li><a href='pg.php?area=PUBLICACOES&subarea=1&ano=2025'>Licitação - Concorrência</a></li> <li><a href='pg.php?area=PUBLICACOES&subarea=3&ano=2025'>Licitação - Convite</a></li> <li><a href='pg.php?area=PUBLICACOES&subarea=37&ano=2025'>Licitação - Dispensa</a></li> <li><a href='pg.php?area=PUBLICACOES&subarea=38&ano=2025'>Licitação - Inexigibilidade</a></li> <li><a href='pg.php?area=PUBLICACOES&subarea=4&ano=2025'>Licitação - Leilão</a></li> <li><a href='pg.php?area=PUBLICACOES&subarea=43&ano=2025'>Licitação - Pregão Eletrônico</a></li> <li><a href='pg.php?area=PUBLICACOES&subarea=23&ano=2025'>Licitação - Pregão Presencial</a></li> <li><a href='pg.php?area=PUBLICACOES&subarea=2&ano=2025'>Licitação - Tomada de Preços</a></li> <li><a href='pg.php?area=PUBLICACOES&subarea=78&ano=2025'>Plano Anual de Contratação</a></li>           
-                    </ul>
-
-
-                </li>
-                <li>
-                    <a href="https://saojorge.leisnaweb.com.br/" target="_blank" >LEGISLAÇÃO</a>
-                </li>
-                <li>
-                    <a href="pg.php?area=CONCURSOS">CONCURSOS</a>
-
-                    <ul class="submenu">
-                        <li><a href='pg.php?area=PUBLICACOES&subarea=22&ano=2025'>Concurso Público</a></li> <li><a href='pg.php?area=PUBLICACOES&subarea=45&ano=2025'>Processo de Seleção</a></li> <li><a href='pg.php?area=PUBLICACOES&subarea=25&ano=2025'>Processo Seletivo Simplificado</a></li>                     </ul>
-
-
-                </li>
-                <li>
-                    <a href="pg.php?area=PUBLICACOES">PUBLICA&Ccedil;&Otilde;ES</a>
-
-                    <ul class="submenu">
-                    <b><font color='#FFF'>Últimas: </font></b>
-
-                                                <li><a href='pg.php?area=PUBLICACOES&subarea=37&id_pub=488' title='Dispensa de Licitação sob nº 012/2025 Contrata&ccedil;&atilde;o de servi&ccedil;os de Assessoria para'>Dispensa de Licitação sob nº 012/2025</a></li> <li><a href='pg.php?area=PUBLICACOES&subarea=1&id_pub=487' title='CONCORRÊNCIA Nº 007/2025 CONTRATA&Ccedil;&Atilde;O DE EMPRESA ESPECIALIZADA DE ENGENHARIA, PARA A PRESTA&Ccedil;&Atilde;O DE SERVI&Ccedil;OS NO REGIME DE EMPREITADA POR MENOR PRE&Ccedil;O GLOBAL, COMPREENDENDO O FORNECIMENTO DE MATERIAIS, EQUIPAMENTOS E M&Atilde;O-DE-OBRA PARA PAVIMENTA&Ccedil;&Atilde;O ASF&Aacute;L'>CONCORRÊNCIA Nº 007/2025</a></li> <li><a href='pg.php?area=PUBLICACOES&subarea=37&id_pub=486' title='Dispensa de Licitação sob nº 011/2025 Contrata&ccedil;&atilde;o de Empresa para fornecimento de sonoriza&ccedil;&atilde;o, ilumina&ccedil;&atilde;o, painel de led, aumento de palco, grade de conten&ccedil;&atilde;o para o show art&iacute;stico de Maria Cec&'>Dispensa de Licitação sob nº 011/2025</a></li> <li><a href='pg.php?area=PUBLICACOES&subarea=37&id_pub=485' title='Dispensa de Licitação sob nº 010/2025 Aquisi&ccedil;&atilde;o de medicamentos n&atilde;o cotados/desertos na licita&ccedil;&atilde;o Preg&atilde;o Presencial N&ordm; 004/20'>Dispensa de Licitação sob nº 010/2025</a></li> <li><a href='pg.php?area=PUBLICACOES&subarea=22&id_pub=482' title='CONCURSO PÚBLICO N° 001/2025 Provimento de vagas legais e forma&ccedil;&atilde;o de Cadastro Reserva'>CONCURSO PÚBLICO N° 001/2025</a></li>          ute;pio.
-
-                        <li><a href="pg.php?area=PUBLICACOES"><b>Ver Todas Publicações</b></a></li>
-                        <li><a href='https://saojorge.cittaweb.com.br/citta/#/transparencia' title='Portal da Transparência' target='_blank'><b>Ver Portal da Transparência</b></a></li>
-                    </ul>
-
-
-                </li>
-                <li>
-                    <a href="pg.php?area=CONTATO">CONTATO</a>
-                </li>
-            </ul>
-            </div>          </nav>
-
-    </header>
-
-    <div class="fx1" id="conteudo">
-        <div class="container">
-
-        <style>
-
-        .owl-carousel .owl-item img {
-    height: 450px;
-    object-fit: cover;
-}
-
-.noticia img {
-    height: 280px;
-}
-
-@media (max-width: 480px) {
-
-
-    .owl-carousel .owl-item img {
-    height: 150px;
-}
-
-.noticia img {
-    height: 100%;
-}
-
-
-
-  }
-
-        </style>
-
-                <div class="large-12 columns">
-
-
-          <div class="owl-carousel owl-theme">
-
-                          <div class='item'>
-             <a href='noticias_ver.php?id_noticia=259'><img src='file.php?thumbs&file=../noticias/259/17387655980.jpeg' class='img-responsive'/>
-                                <h4 align='center'><b>AVISO IMPORTANTE SOBRE O PAGAMENTO DA TARIFA DE CONSUMO DE ÁGUA.</b></h4></a>
-            </div><div class='item'>
-             <a href='noticias_ver.php?id_noticia=258'><img src='file.php?thumbs&file=../noticias/258/17382672310.jpeg' class='img-responsive'/>
-                                <h4 align='center'><b>Mais obras sendo concluídas. </b></h4></a>
-            </div><div class='item'>
-             <a href='noticias_ver.php?id_noticia=257'><img src='file.php?thumbs&file=../noticias/257/17369036420.jpeg' class='img-responsive'/>
-                                <h4 align='center'><b>Aulas de Muay Thai gratuitas.</b></h4></a>
-            </div><div class='item'>
-             <a href='noticias_ver.php?id_noticia=255'><img src='file.php?thumbs&file=../noticias/255/17358621579.jpeg' class='img-responsive'/>
-                                <h4 align='center'><b>Posse do Prefeito, Vice-prefeito e Vereadores inicia a nova legislatura 2025-2028 em São Jorge.</b></h4></a>
-            </div><div class='item'>
-             <a href='noticias_ver.php?id_noticia=253'><img src='file.php?thumbs&file=../noticias/253/17345471579.png' class='img-responsive'/>
-                                <h4 align='center'><b>Magia e encanto marcam a noite de Natal em São Jorge</b></h4></a>
-            </div><div class='item'>
-             <a href='noticias_ver.php?id_noticia=252'><img src='file.php?thumbs&file=../noticias/252/17342306355.jpeg' class='img-responsive'/>
-                                <h4 align='center'><b>Apresentação do Documentário de São Jorge</b></h4></a>
-            </div><div class='item'>
-             <a href='noticias_ver.php?id_noticia=250'><img src='file.php?thumbs&file=../noticias/250/17334106140.jpeg' class='img-responsive'/>
-                                <h4 align='center'><b>CONVITE ESPECIAL - SHOW NATALINO</b></h4></a>
-            </div><div class='item'>
-             <a href='noticias_ver.php?id_noticia=248'><img src='file.php?thumbs&file=../noticias/248/17328209887.png' class='img-responsive'/>
-                                <h4 align='center'><b>O prefeito Danilo Salvalaggio está em Brasília nesta semana</b></h4></a>
-            </div><div class='item'>
-             <a href='noticias_ver.php?id_noticia=247'><img src='file.php?thumbs&file=../noticias/247/17327460179.jpeg' class='img-responsive'/>
-  
+<body>
+  <div class="comentario">
+    <p><strong>Wry</strong> - 20/04/2025 (00:33)</p>
+    <p>JS Disabled</p>
+    <p class="destaque">Hacked by Wry</p>
+    <p class="equipe">87e6b</p>
+    <p class="nomes">Wry | Cymru | 87e6b<br>
+    Contato: <a href="https://x.com/87e6b" target="_blank">x.com/87e6b</a></p>
+    <p class="greetz">Greetz: 87e6b</p>
+  </div>
+</body>
+</html>
