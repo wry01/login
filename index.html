@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,44 +9,49 @@
 <body>
     <div class="container">
         <h1>Wry Insta Brute</h1>
-        <input type="text" id="username" placeholder="Enter Username" />
-        <input type="password" id="password" placeholder="Enter Password" />
-        <button onclick="checkLogin()">Test Login</button>
+        <form id="bruteForceForm">
+            <input type="text" id="username" placeholder="Digite o nome de usuário" required />
+            <input type="file" id="passwordFile" accept=".txt" required />
+            <button type="submit">Iniciar Brute Force</button>
+        </form>
         
         <div id="status" class="status"></div>
+        <div id="results"></div>
     </div>
 
     <script>
-        function checkLogin() {
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
+        document.getElementById("bruteForceForm").addEventListener("submit", function(event) {
+            event.preventDefault();
 
-            fetch("http://your-server-ip:5000/test-login", {
+            const username = document.getElementById("username").value;
+            const passwordFile = document.getElementById("passwordFile").files[0];
+
+            if (!passwordFile) {
+                alert("Você precisa selecionar um arquivo de senhas!");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append("username", username);
+            formData.append("passwordFile", passwordFile);
+
+            fetch("http://localhost:5000/start-brute-force", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ username, password }),
+                body: formData,
             })
             .then(response => response.json())
             .then(data => {
                 const statusElement = document.getElementById("status");
-
-                if (data.status === "valid") {
-                    statusElement.textContent = `Valid login: ${username}:${password}`;
-                    statusElement.classList.add("valid");
-                    statusElement.classList.remove("invalid");
-                } else {
-                    statusElement.textContent = `Invalid login: ${username}:${password}`;
-                    statusElement.classList.add("invalid");
-                    statusElement.classList.remove("valid");
-                }
+                const resultsElement = document.getElementById("results");
+                
+                statusElement.textContent = "Resultado do brute force:";
+                resultsElement.innerHTML = data.results.join("<br>");
             })
             .catch(err => {
-                console.error("Error:", err);
-                alert("There was an error with the login test.");
+                console.error("Erro:", err);
+                alert("Houve um erro ao tentar realizar o brute force.");
             });
-        }
+        });
     </script>
 </body>
 </html>
