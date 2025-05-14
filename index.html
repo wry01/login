@@ -1,16 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wry SysteM</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Consultas</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="center">
-        <button class="ui-btn" onclick="location.href='cod.html'">
-            <span>INICIAR</span>
-        </button>
+  <div class="sidebar">
+    <div class="logo">Cyber<br>Consultas</div>
+    <ul class="menu">
+      <li><i class="fas fa-search"></i> Consultas</li>
+      <li><i class="fas fa-tools"></i> Ferramentas</li>
+      <li><i class="fas fa-check-circle"></i> Checkers</li>
+      <li><i class="fas fa-cog"></i> Configurações</li>
+      <li><i class="fas fa-sign-out-alt"></i> Logout</li>
+      <li><i class="fas fa-user-shield"></i> Administração</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <h1>Consultas Disponíveis</h1>
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-id-card"></i>
+        <h2>Consulta CPF</h2>
+        <p>Verifique dados de CPF</p>
+        <button>Acessar</button>
+        <span class="status-dot"></span>
+      </div>
+      <div class="card">
+        <i class="fas fa-car"></i>
+        <h2>Consulta Placa</h2>
+        <p>Consulte dados de veículos</p>
+        <button>Acessar</button>
+        <span class="status-dot"></span>
+      </div>
+      <div class="card">
+        <i class="fas fa-phone"></i>
+        <h2>Consulta Número</h2>
+        <p>Identifique operadora e localização</p>
+        <button>Acessar</button>
+        <span class="status-dot"></span>
+      </div>
+      <div class="card">
+        <i class="fas fa-user"></i>
+        <h2>Consulta Nome</h2>
+        <p>Pesquise informações por nome</p>
+        <button>Acessar</button>
+        <span class="status-dot"></span>
+      </div>
+      <div class="card">
+        <i class="fas fa-building"></i>
+        <h2>Consulta CNPJ</h2>
+        <p>Consulte dados de empresas</p>
+        <button>Acessar</button>
+        <span class="status-dot"></span>
+      </div>
+      <div class="card">
+        <i class="fas fa-globe"></i>
+        <h2>Consulta IP</h2>
+        <p>Veja informações sobre um IP</p>
+        <button>Acessar</button>
+        <span class="status-dot"></span>
+      </div>
     </div>
+  </div>
 </body>
 </html>
