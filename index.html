@@ -1,71 +1,141 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyber Consultas</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Consulta API - Finger of God</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: #eee;
+    margin: 0; padding: 0;
+    display: flex; justify-content: center; align-items: center;
+    height: 100vh;
+  }
+  .container {
+    background: rgba(0,0,0,0.75);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 0 20px #1abc9c;
+    text-align: center;
+  }
+  h1 {
+    margin-bottom: 1rem;
+    color: #1abc9c;
+  }
+  label {
+    display: block;
+    margin: 1rem 0 0.5rem 0;
+    font-weight: bold;
+  }
+  select, input[type=text] {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+  }
+  button {
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    background: #1abc9c;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #222;
+    font-weight: 700;
+    transition: background 0.3s ease;
+  }
+  button:hover {
+    background: #16a085;
+  }
+  #resultado {
+    margin-top: 2rem;
+    background: #222;
+    padding: 1rem;
+    border-radius: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+    text-align: left;
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+</style>
 </head>
 <body>
-  <div class="sidebar">
-    <div class="logo">Cyber<br>Consultas</div>
-    <ul class="menu">
-      <li><i class="fas fa-search"></i> Consultas</li>
-      <li><i class="fas fa-tools"></i> Ferramentas</li>
-      <li><i class="fas fa-check-circle"></i> Checkers</li>
-      <li><i class="fas fa-cog"></i> Configurações</li>
-      <li><i class="fas fa-sign-out-alt"></i> Logout</li>
-      <li><i class="fas fa-user-shield"></i> Administração</li>
-    </ul>
+  <div class="container">
+    <h1>Consulta API - Finger of God</h1>
+    <label for="tipoConsulta">Tipo de Consulta</label>
+    <select id="tipoConsulta">
+      <option value="nome">Nome</option>
+      <option value="cpf">CPF</option>
+      <option value="placa">Placa</option>
+      <option value="telefone">Telefone</option>
+    </select>
+
+    <label for="inputConsulta">Digite o valor</label>
+    <input type="text" id="inputConsulta" placeholder="Digite aqui..." />
+
+    <button id="btnConsultar">Consultar</button>
+
+    <div id="resultado"></div>
   </div>
 
-  <div class="main">
-    <h1>Consultas Disponíveis</h1>
-    <div class="cards">
-      <div class="card">
-        <i class="fas fa-id-card"></i>
-        <h2>Consulta CPF</h2>
-        <p>Verifique dados de CPF</p>
-        <button>Acessar</button>
-        <span class="status-dot"></span>
-      </div>
-      <div class="card">
-        <i class="fas fa-car"></i>
-        <h2>Consulta Placa</h2>
-        <p>Consulte dados de veículos</p>
-        <button>Acessar</button>
-        <span class="status-dot"></span>
-      </div>
-      <div class="card">
-        <i class="fas fa-phone"></i>
-        <h2>Consulta Número</h2>
-        <p>Identifique operadora e localização</p>
-        <button>Acessar</button>
-        <span class="status-dot"></span>
-      </div>
-      <div class="card">
-        <i class="fas fa-user"></i>
-        <h2>Consulta Nome</h2>
-        <p>Pesquise informações por nome</p>
-        <button>Acessar</button>
-        <span class="status-dot"></span>
-      </div>
-      <div class="card">
-        <i class="fas fa-building"></i>
-        <h2>Consulta CNPJ</h2>
-        <p>Consulte dados de empresas</p>
-        <button>Acessar</button>
-        <span class="status-dot"></span>
-      </div>
-      <div class="card">
-        <i class="fas fa-globe"></i>
-        <h2>Consulta IP</h2>
-        <p>Veja informações sobre um IP</p>
-        <button>Acessar</button>
-        <span class="status-dot"></span>
-      </div>
-    </div>
-  </div>
+<script>
+  const btnConsultar = document.getElementById('btnConsultar');
+  const tipoConsulta = document.getElementById('tipoConsulta');
+  const inputConsulta = document.getElementById('inputConsulta');
+  const resultado = document.getElementById('resultado');
+
+  btnConsultar.addEventListener('click', () => {
+    const tipo = tipoConsulta.value;
+    const query = inputConsulta.value.trim();
+
+    if (!query) {
+      resultado.textContent = 'Por favor, digite um valor para consulta.';
+      return;
+    }
+
+    let url = '';
+
+    switch(tipo) {
+      case 'nome':
+        url = `https://api-bruxel4s.shop/api/consulta/nome?query=${encodeURIComponent(query)}`;
+        break;
+      case 'cpf':
+        url = `https://api-bruxel4s.shop/api/consulta/cpf?query=${encodeURIComponent(query)}`;
+        break;
+      case 'placa':
+        url = `https://api-bruxel4s.shop/api/consulta/placa?query=${encodeURIComponent(query)}`;
+        break;
+      case 'telefone':
+        url = `https://api-bruxel4s.shop/api/consulta/telefone?query=${encodeURIComponent(query)}`;
+        break;
+      default:
+        resultado.textContent = 'Tipo de consulta inválido.';
+        return;
+    }
+
+    resultado.textContent = 'Carregando...';
+
+    fetch(url, {headers: {'User-Agent': 'Mozilla/5.0'}})
+      .then(res => {
+        if (!res.ok) throw new Error('Erro na requisição');
+        return res.json();
+      })
+      .then(data => {
+        // Exibir o JSON formatado
+        resultado.textContent = JSON.stringify(data, null, 2);
+      })
+      .catch(err => {
+        resultado.textContent = 'Erro ao consultar: ' + err.message;
+      });
+  });
+</script>
 </body>
 </html>
